@@ -1,16 +1,18 @@
-rem Set Directory Paths
+@echo off
+echo "Setting Directory Paths..."
 set hamlDir=html
 set sassDir=css
 set outputDir=build
 
-rem Create Build Directory
+echo "Creating Build Directory.."
 if exist %outputDir% rmdir /S /Q %outputDir% 
 if not exist %outputDir% mkdir %outputDir% 
 
-rem  Compile HAML
+echo "Compiling HAML"
 if not exist %outputDir%\html mkdir %outputDir%\html
-call haml %hamlDir%\index.haml %outputDir%\index.html
-call haml %hamlDir%\*.haml %outputDir%\html
+for /f %%f in ('dir /b %hamlDir%') do call haml --trace %hamlDir%\%%f %outputDir%\html\%%~nf.html
+move %outputDir%\%hamlDir%\index.html %outputDir%\
 
-rem Compile Sass
+
+echo "Compiling Sass"
 call sass --style=compressed %sassDir%:%outputDir%\css
