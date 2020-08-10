@@ -1,2 +1,53 @@
-h1
-	font-size: 6em
+hgroup
+	text-align: center
+
+article
+	min-height: 50%
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: center
+
+nav
+	
+	ul
+		padding-left: 0
+		display: flex
+		flex-direction: row
+		width: 100%
+		list-style: none
+
+		li
+			display: inline-block
+			text-decoration: none
+			padding: 5px
+			margin: 5px
+
+			a
+				text-decoration: none
+
+
+.card
+	min-height: 33%
+	min-width: 32%
+	padding: 5px
+
+	background-color: rgba(10,10,10,.75)
+	background-position: center
+	background-repeat: no-repeat
+	background-size: 0 0
+	transform: scale(1.0)
+	transition: all .25s ease-in-out
+	
+	&:hover
+		background-size: 100%
+		box-shadow: inset 0 0 0 10px rgba(255,255,255, .4)
+		transform: scale(0.98)
+
+	hgroup
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+
+
