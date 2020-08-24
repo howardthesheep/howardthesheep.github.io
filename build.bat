@@ -4,6 +4,7 @@ set hamlDir=html
 set sassDir=css
 set outputDir=build
 set imgDir=img
+set jsDir=js
 
 echo.
 echo Creating Build Directory..
@@ -13,6 +14,10 @@ if not exist %outputDir% mkdir %outputDir%
 echo.
 echo Moving images into Build Directory...
 robocopy %imgDir% %outputDir%\%imgDir% /E /NJH /NJS /NFL /NDL
+
+echo.
+echo Moving js into Build Directory...
+robocopy %jsDir% %outputDir%\%jsDir% /E /NJH /NJS /NFL /NDL
 
 echo.
 echo Compiling HAML
