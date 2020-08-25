@@ -1,4 +1,13 @@
 //TODO: Create Global vars for colors, margins, paddings, etc...
+body 
+	background: #ffffff00 url("../img/polygonal-bg.jpg") no-repeat center
+	background-size: cover
+
+h1,h2,h3,h4,h5,h6
+	font-family: 'Raleway', sans-serif
+
+div, p, span, a, li, button
+	font-family: 'Montserrat', sans-serif
 
 hgroup
 	text-align: center
@@ -7,6 +16,7 @@ hr
 	border-color: black
 
 article
+	margin-top: 2.5%
 	min-height: 50%
 	display: flex
 	flex-direction: row
@@ -21,49 +31,96 @@ nav
 		flex-direction: row
 		width: 100%
 		list-style: none
+		justify-content: center
 
 		li
 			display: inline-block
 			text-decoration: none
-			padding: 5px
-			margin: 5px
+			padding: 10px
+			margin: 10px
+			width: 100px
+			border: 0.1em solid #000000
+			border-radius: 5px
+			color: #000000
+			text-align: center
+			cursor: pointer
+			transition: all 0.25s
+
+			&:hover
+				color:#FFFFFF
+				background-color:#000000
+
 
 			a
+				color: inherit
 				text-decoration: none
 
 
 .card
-	// Todo: border radius
+	animation: 1s ease-out 0s 1 fadeGrowIn
 	min-height: 33%
-	min-width: 32%
+	min-width: 30%
 	padding: 5px
-
+	border-radius: 5px
 	background-position: center
 	background-repeat: no-repeat
 	background-size: 90%
 	transform: scale(1.0)
 	transition: all .25s ease-in-out
+	transition-property: transform
 	
 	&:hover
 		transform: scale(1.05)
-		background-color: rgba(0,0,0,.4)
-
-		hgroup 
+		
+		.content 
 			opacity: 100%
 			background-color: rgba(255,255,255, .4)
 
-	hgroup
-		// todo: background color to be like frosted glass
-		// to increase legibility on image
+	.content
+		width: 100%
+		height: 100%
 		opacity: 0
 		position: absolute
 		top: 50%
 		left: 50%
 		transform: translate(-50%, -50%)
-		padding: 5px
-		margin: 5px
-		background-color: rgba(255,255,255,0)
+		padding: 20px
+		backdrop-filter: none
 		transition: all .25s ease-in-out
-		
+		transition-property: opacity, background-color
+
+		button
+			padding: .5em 1em
+			border: 0.1em solid #000000
+			border-radius: 5px
+			color: #000000
+			text-align: center
+			cursor: pointer
+			transition: all 0.25s
+			display: block
+			margin: 0 auto
+
+			&:hover
+				color:#FFFFFF
+				background-color:#000000
 
 
+@keyframes fadeGrowIn
+	0%
+		transform: scale(0)
+		opacity: 0
+	100%
+		transform: scale(1)
+		opacity: 1
+
+@keyframes slideInFromTop
+	0%
+		transform: translateY(-200%)
+	100%
+		transform: translateY(0)
+
+@keyframes slideInFromBottom
+	0% 
+		transform: translateY(200%)
+	100%
+		transform: translateY(0)

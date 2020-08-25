@@ -1,0 +1,3 @@
+window.addEventListener("load", () => {
+	// do something once window has loaded...
+});

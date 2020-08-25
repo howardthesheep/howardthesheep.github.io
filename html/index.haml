@@ -1,12 +1,14 @@
 %html
 	%head
-	%link(rel="stylesheet" href="./css/main.css")
+		%link(rel="stylesheet" href="./css/main.css")
+		%script(src="./js/anime.min.js")
+		%script(src="./js/animations.js")
+		%link(href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet")
 		%title Parker Jones -- Portfolio Home
 	%body
 		%header
 			%hgroup
 				%h1 Parker Jones
-				%h2 Software Developer
 			%nav
 				%ul
 					%li
@@ -17,17 +19,27 @@
 						%a(href="./html/contact.html") Contact Me
 		%article
 			%div.card(style="background-image:url('./img/dossibay.png')")
-				%hgroup
-					%h3 Project Manager
-					%hr
-					%h4 Dossibay, LLC
+				%div.content
+					%hgroup
+						%h2 Project Manager
+						%hr
+						%h3 Dossibay, LLC
+					%p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo vulputate mattis. Donec vel nulla dictum, aliquet turpis et, fringilla nisl. Ut sollicitudin urna mauris. Mauris dolor lectus, vestibulum et interdum ut, finibus eu augue. Cras eget augue aliquet, laoreet orci ac, rutrum nunc. Proin suscipit blandit viverra.
+					%button Read More
 			%div.card(style="background-image:url('./img/ellemInc.png')")
-				%hgroup
-					%h3 Chief Operating Officer
-					%hr
-					%h4 Ellem, Inc.
+				%div.content
+					%hgroup
+						%h2 Chief Operating Officer
+						%hr
+						%h3 Ellem, Inc.
+					%p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo vulputate mattis. Donec vel nulla dictum, aliquet turpis et, fringilla nisl. Ut sollicitudin urna mauris. Mauris dolor lectus, vestibulum et interdum ut, finibus eu augue. Cras eget augue aliquet, laoreet orci ac, rutrum nunc. Proin suscipit blandit viverra.	
+					%button Read More
 			%div.card(style="background-image:url('./img/mwec.png')")
-				%hgroup
-					%h3 AutoCAD Designer
-					%hr
-					%h4 Marshcke Engineering
+				%div.content
+					%hgroup
+						%h2 AutoCAD Designer
+						%hr
+						%h3 Marschke Engineering
+					%p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo vulputate mattis. Donec vel nulla dictum, aliquet turpis et, fringilla nisl. Ut sollicitudin urna mauris. Mauris dolor lectus, vestibulum et interdum ut, finibus eu augue. Cras eget augue aliquet, laoreet orci ac, rutrum nunc. Proin suscipit blandit viverra.
+					%button Read More
+	%script(src="./js/main.js")
